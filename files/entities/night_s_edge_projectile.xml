@@ -1,0 +1,99 @@
+<Entity tags="projectile,player_projectile">
+
+  <Base file="data/entities/base_projectile.xml">
+    <ProjectileComponent
+      _enabled="1"
+      friendly_fire="0"
+      penetrate_world="0"
+      penetrate_entities="0"
+      damage_by_distance="0"
+      on_death_explode="0"
+      on_lifetime_over_explode="0"
+      collision="1"
+      lifetime="10"
+      speed="300"
+      restitution="0"
+      gravity="0"
+      bounces="0"
+      friction="0"
+      homing="0"
+      shot_effects="0"
+      trail_effect="0"
+      die_on_collision="1"
+      knockback="5"
+    >
+    </ProjectileComponent>
+  </Base>
+
+  <SpriteComponent
+    _enabled="1"
+    image_file="mods/terraria_mod_in_noita/files/items_gfx/night_s_edge.xml"
+    offset_x="16"
+    offset_y="16"
+    has_special_scale="1"
+    special_scale_x="0.5"
+    special_scale_y="0.5"
+    rect_animation="default"
+    visible="1"
+  >
+  </SpriteComponent>
+
+  <DamageModelComponent
+    _enabled="1"
+    hp="100"
+    materials="materials_physcst.xml"
+    blood_material="blood"
+    materials_on_death_amount="0"
+    damage_critical="0"
+    damage_mortals="1"
+    on_fire_damage_amount="0"
+    on_fire_damage_enabled="0"
+  >
+  </DamageModelComponent>
+
+  <!-- Purple particles for Terraria feel -->
+  <ParticleEmitterComponent
+    _enabled="1"
+    emission_interval_min="1"
+    emission_interval_max="2"
+    count_min="1"
+    count_max="2"
+    cosmetic_force_create="0"
+    emission_interval_with_velocity_multiplier="0"
+    emission_chance="1"
+    emit_cosmetic_particles="1"
+    emit_real_particles="0"
+    emit_material_on_collision="0"
+    is_emitting="1"
+    image_file="data/particles/spark_magic.xml"
+    x_pos_offset_min="-3"
+    x_pos_offset_max="3"
+    y_pos_offset_min="-3"
+    y_pos_offset_max="3"
+    x_vel_offset_min="-15"
+    x_vel_offset_max="15"
+    y_vel_offset_min="-15"
+    y_vel_offset_max="15"
+    lifetime_min="0.3"
+    lifetime_max="0.6"
+    velocity_multiplier_min="1.0"
+    velocity_multiplier_max="1.0"
+    area_circle_radius_min="0"
+    area_circle_radius_max="0"
+    area_circle_sector_degrees="0"
+    color_r="0.7"
+    color_g="0.3"
+    color_b="0.9"
+    color_a="1"
+  >
+  </ParticleEmitterComponent>
+
+  <!-- Damage on collision -->
+  <LuaComponent
+    execute_on_collision="1"
+    remove_after_collision="1"
+    script_source_file="mods/terraria_mod_in_noita/files/scripts/night_s_edge_damage.lua"
+  >
+  </LuaComponent>
+
+</Entity>

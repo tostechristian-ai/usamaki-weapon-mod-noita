@@ -1,0 +1,63 @@
+<Entity tags="wand">
+
+  <AbilityComponent
+    _enabled="1"
+    sprite_file="mods/terraria_mod_in_noita/files/items_gfx/night_s_edge.xml"
+    swim_propel_amount="0"
+    ui_name="Usamaki"
+    drop_as_item_on_death="0"
+    cooldown_frames="25"
+    entity_count="1"
+    reload_time_frames="0"
+    mana_charge_speed="200"
+    mana_max="400"
+    use_gun_script="1"
+  >
+    <gun_config
+      shuffle_deck_when_empty="0"
+      reload_time="20"
+      deck_capacity="10"
+      actions_per_round="1"
+    >
+    </gun_config>
+    <gunaction_config
+      fire_rate_wait="25"
+      spread_degrees="15"
+      speed_multiplier="1.5"
+    >
+    </gunaction_config>
+  </AbilityComponent>
+
+  <HotspotComponent
+    _tags="shoot_pos"
+    offset.x="8"
+    offset.y="0"
+  >
+  </HotspotComponent>
+
+  <Base file="data/entities/base_item.xml">
+    <ItemComponent
+      item_name="Usamaki"
+      remove_on_death="1"
+      collect_nondefault_actions="1"
+    >
+    </ItemComponent>
+  </Base>
+
+  <LuaComponent
+    execute_on_added="1"
+    remove_after_executed="1"
+    script_source_file="mods/terraria_mod_in_noita/files/scripts/night_s_edge_setup.lua"
+  >
+  </LuaComponent>
+
+  <Base file="data/entities/base_wand_pickup.xml">
+    <LuaComponent _enabled="0" script_item_picked_up="" />
+  </Base>
+
+  <ManaReloaderComponent
+    _tags="enabled_in_world,enabled_in_hand,enabled_in_inventory"
+  >
+  </ManaReloaderComponent>
+
+</Entity>

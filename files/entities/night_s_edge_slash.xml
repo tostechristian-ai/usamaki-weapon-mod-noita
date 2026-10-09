@@ -1,0 +1,61 @@
+<Entity tags="projectile,melee">
+
+  <Base file="data/entities/base_projectile.xml">
+    <ProjectileComponent
+      _enabled="1"
+      friendly_fire="0"
+      penetrate_world="0"
+      penetrate_entities="1"
+      damage_by_distance="0"
+      on_death_explode="0"
+      on_lifetime_over_explode="0"
+      collision="1"
+      lifetime="5"
+      speed="200"
+      restitution="0"
+      gravity="0"
+      bounces="0"
+      friction="0"
+      homing="0"
+      shot_effects="0"
+      trail_effect="0"
+      die_on_collision="1"
+      knockback="3"
+    >
+    </ProjectileComponent>
+  </Base>
+
+  <SpriteComponent
+    _enabled="1"
+    image_file="mods/terraria_mod_in_noita/files/items_gfx/night_s_edge.xml"
+    offset_x="16"
+    offset_y="16"
+    has_special_scale="1"
+    special_scale_x="1"
+    special_scale_y="1"
+    rect_animation="default"
+    visible="1"
+  >
+  </SpriteComponent>
+
+  <DamageModelComponent
+    _enabled="1"
+    hp="10"
+    materials="materials_physcst.xml"
+    blood_material="blood"
+    materials_on_death_amount="10"
+    damage_critical="0"
+    damage_mortals="1"
+    on_fire_damage_amount="0"
+    on_fire_damage_enabled="0"
+  >
+  </DamageModelComponent>
+
+  <LuaComponent
+    execute_on_collision="1"
+    remove_after_collision="1"
+    script_source_file="mods/terraria_mod_in_noita/files/scripts/night_s_edge_slash.lua"
+  >
+  </LuaComponent>
+
+</Entity>
