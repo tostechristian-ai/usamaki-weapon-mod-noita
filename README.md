@@ -10,7 +10,7 @@ A powerful sword wand mod for Noita, inspired by Terraria's Night's Edge.
 
 ## Installation
 
-1. Download the mod from the [Releases](https://github.com/yourusername/usamaki-weapon-mod-noita/releases) section
+1. Download the mod from the [Releases](https://github.com/tostechristian-ai/usamaki-weapon-mod-noita/releases) section
 2. Extract the `usamaki` folder to your Noita `mods` directory:
    - Windows: `C:\Program Files (x86)\Steam\steamapps\common\Noita\mods\`
    - Linux: `~/.steam/steam/steamapps/common/Noita/mods/`
